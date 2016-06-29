@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '0.10'
+before_install:
+- npm install
+- npm install -g bower
+- bower install
+# before-script:
+# - grunt test cover
+script:
+- npm run travis

@@ -1268,7 +1268,7 @@ li.highlight {
   /*padding: 16px;*/
   padding-left: 10px;
   border-left: 1px solid white;
-  opacity:1;
+  opacity:1 ; /* !important*/
   text-align: left;
   bottom: 16px;
   font-size: 88%;

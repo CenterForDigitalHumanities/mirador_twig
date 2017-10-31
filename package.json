@@ -27,7 +27,12 @@
     "grunt-template-jasmine-istanbul": "^0.3.3",
     "jasmine-core": "^2.1.3",
     "jasmine-jquery": "^2.0.5",
+<<<<<<< HEAD
     "karma": "^0.12.16",
+=======
+    "jstree": "^3.3.4",
+    "karma": "^1.5",
+>>>>>>> refs/remotes/upstream/develop
     "karma-chrome-launcher": "^0.1.7",
     "karma-coverage": "^0.2.7",
     "karma-firefox-launcher": "^0.1.3",

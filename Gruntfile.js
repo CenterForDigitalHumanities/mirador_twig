@@ -23,9 +23,20 @@ module.exports = function(grunt) {
 
   // libraries/plugins
   vendors = [
+<<<<<<< HEAD
     'js/lib/jquery.min.js',
     'js/lib/jquery-ui.min.js',
     'js/lib/jquery.scrollTo.min.js',
+=======
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/jquery-migrate/dist/jquery-migrate.min.js',
+    'node_modules/jquery-ui-dist/jquery-ui.min.js',
+    'node_modules/bootstrap/js/modal.js',
+    'node_modules/bootstrap/js/transition.js',
+    'node_modules/bootbox/bootbox.js',
+    'node_modules/jquery.scrollto/jquery.scrollTo.min.js',
+    'node_modules/jstree/dist/jstree.min.js',
+>>>>>>> refs/remotes/upstream/develop
     'js/lib/jquery.qtip.min.js',
     'js/lib/state-machine.min.js',
     'js/lib/tinymce.min.js',
@@ -92,6 +103,7 @@ module.exports = function(grunt) {
       },
       css: {
         src: [
+<<<<<<< HEAD
         'css/normalize.css',
         'css/font-awesome.css',
         'css/jquery-ui.min.css',
@@ -100,6 +112,20 @@ module.exports = function(grunt) {
         'css/spectrum.css',
         'css/mirador.css',
         'css/material-icons.css'
+=======
+          'css/bootstrap.modals.css',
+          'css/normalize.css',
+          'node_modules/font-awesome/css/font-awesome.min.css',
+          'css/jquery-ui.min.css',
+          'node_modules/jstree/dist/themes/default/style.min.css',
+          'css/collection-tree-mod.css',
+          'css/jquery.qtip.min.css',
+          'node_modules/spectrum-colorpicker/spectrum.css',
+          'node_modules/select2/dist/css/select2.min.css',
+          'css/mirador.css',
+          'css/material-icons.css',
+          'bower_components/simplePagination.js/simplePagination.css'
+>>>>>>> refs/remotes/upstream/develop
         ],
         dest: 'build/mirador/css/mirador-combined.css'
       }

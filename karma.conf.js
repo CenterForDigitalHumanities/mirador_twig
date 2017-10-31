@@ -15,9 +15,16 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       // vendors
+<<<<<<< HEAD
       'js/lib/jquery.min.js',
       'js/lib/jquery-ui.min.js',
       'js/lib/jquery.scrollTo.min.js',
+=======
+      'node_modules/jquery/dist/jquery.min.js',
+      'node_modules/jquery-ui-dist/jquery-ui.min.js',
+      'node_modules/jquery.scrollto/jquery.scrollTo.min.js',
+      'node_modules/jstree/dist/jstree.min.js',
+>>>>>>> refs/remotes/upstream/develop
       'js/lib/jquery.qtip.min.js',
       'js/lib/state-machine.min.js',
       'js/lib/tinymce.min.js',

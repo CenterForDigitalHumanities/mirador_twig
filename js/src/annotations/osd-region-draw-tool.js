@@ -122,6 +122,7 @@
       this.svgOverlay.paperScope.project.clear();
       var _this = this;
       _this.annotationsToShapesMap = {};
+<<<<<<< HEAD
       var deferreds = jQuery.map(this.list, function(annotation) {
         var deferred = jQuery.Deferred();
         var shapeArray;
@@ -132,6 +133,24 @@
             var shape = annotation.on.selector.value.split('=')[1].split(',');
             shape = _this.svgOverlay.viewer.viewport.imageToViewportRectangle(shape[0], shape[1], shape[2], shape[3]);
             shapeArray = _this.svgOverlay.createRectangle(shape, annotation);
+=======
+      var strategies = [
+        new $.Mirador21Strategy(),
+        new $.LegacyOpenAnnotationStrategy(),
+        new $.MiradorLegacyStrategy(),
+        new $.MiradorDualStrategy()
+      ];
+
+      for (var i = 0; i < this.list.length; i++) {
+        var annotation = this.list[i];
+        try {
+          var shapeArray = this.prepareShapeArray(annotation, strategies);
+          if (shapeArray.length > 0) {
+            _this.svgOverlay.restoreLastView(shapeArray);
+            _this.annotationsToShapesMap[annotation['@id']] = shapeArray;
+          } else {
+            console.log("ERROR couldn't find a strategy for " + annotation["@id"]);
+>>>>>>> refs/remotes/upstream/develop
           }
         } else {
           var shapeObj = annotation.on.split('#')[1].split('=')[1].split(',');

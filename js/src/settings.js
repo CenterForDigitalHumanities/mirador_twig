@@ -48,7 +48,15 @@
       //control what is available in the side panel. if "sidePanel" is false, these options won't be applied
       "sidePanelOptions" : {
         "toc" : true,
+<<<<<<< HEAD
         "annotations" : false
+=======
+        "annotations" : false,
+        "tocTabAvailable": true,
+        "layersTabAvailable": false,
+        "searchTabAvailable": false,
+        "annotationTabAvailable": false
+>>>>>>> refs/remotes/upstream/develop
       },
       "sidePanelVisible" : true, //whether or not to make the side panel visible in this window on load. This setting is dependent on sidePanel being true
       "overlay" : true, //whether or not to make the metadata overlay available/visible in this window
@@ -169,6 +177,13 @@
       }
     },
 
+    'manifestsPanel': {
+      'name': 'Classic Mirador Manifests Panel',
+      'module': 'ManifestsPanel',
+      'options': {
+      }
+    },
+    
     'sharingEndpoint': {
       'url': '',
       'storeId': 123,

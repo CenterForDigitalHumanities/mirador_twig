@@ -32,14 +32,19 @@
               label:'Index'
             }
           },
-          /*{
+          {
            name : 'annotations',
            options : {
            available: _this.annotationsTabAvailable,
+<<<<<<< HEAD
            id:'annotationsTab', 
            label:'Annotations'
+=======
+           id:'annotationsTab',
+           label:'Anno.'
+>>>>>>> refs/remotes/upstream/develop
            }
-           },*/
+          },
           {
             name : 'layers',
             options : {

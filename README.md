@@ -12,6 +12,7 @@ Mirador is a multi-repository, configurable, extensible, and easy-to-integrate v
 ###[See a Demo](http://projectmirador.org/demo/#aba693db-5073-4bcc-a855-9925fa3168d4)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ### Getting Started with Local Development
 Mirador uses [node.js](http://nodejs.org/) and a build system to assemble, test, and manage the development resources. If you have never used these tools before, you may need to install them.
@@ -97,6 +98,11 @@ that contains code to make it work for projects used at Saint Louis University. 
 ### Run in Development
 Mirador uses [Node.js](https://nodejs.org/) and a build system to assemble, test, and manage the development resources. If you have never used these tools before, you may need to install them.
 
+=======
+### Run in Development
+Mirador uses [Node.js](https://nodejs.org/) and a build system to assemble, test, and manage the development resources. If you have never used these tools before, you may need to install them.
+
+>>>>>>> refs/remotes/upstream/develop
  1. Install [Node.js](https://nodejs.org/)
  2. Install the Grunt command line runner i.e. `npm install -g grunt-cli`
  3. Install the Bower command line utility i.e. `npm install -g bower`
@@ -108,5 +114,8 @@ Mirador uses [Node.js](https://nodejs.org/) and a build system to assemble, test
 `npm test`
 
 For more information, see the [Docs](http://projectmirador.org/docs/docs/getting-started.html), submit an [issue](https://github.com/projectmirador/mirador/issues), or ask on [Slack](http://bit.ly/iiif-slack).
+<<<<<<< HEAD
+>>>>>>> refs/remotes/upstream/develop
+=======
 >>>>>>> refs/remotes/upstream/develop
 

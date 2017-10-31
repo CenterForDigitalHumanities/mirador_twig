@@ -781,6 +781,7 @@
     getAnnotations: function() {
       //first look for manifest annotations
       var _this = this,
+<<<<<<< HEAD
       url = _this.manifest.getAnnotationsListUrl(_this.canvasID);
 
       if (url !== false) {
@@ -815,6 +816,15 @@
           if(oneofours && goAhead){
             jQuery("div[listID='"+annoListID+"']").empty();
             jQuery.each(_this.annotationsList, function(index, value) {
+=======
+          urls = _this.manifest.getAnnotationsListUrls(_this.canvasID);
+
+      if (urls.length !== 0) {
+        jQuery.each(urls, function(index, url) {
+          jQuery.getJSON(url, function(list) {
+            var annotations = list.resources;
+            jQuery.each(annotations, function(index, value) {
+>>>>>>> refs/remotes/upstream/develop
               //if there is no ID for this annotation, set a random one
               if (typeof value['@id'] === 'undefined') {
                 value['@id'] = $.genUUID();

@@ -36,6 +36,9 @@ module.exports = function(grunt) {
     'node_modules/bootbox/bootbox.js',
     'node_modules/jquery.scrollto/jquery.scrollTo.min.js',
     'node_modules/jstree/dist/jstree.min.js',
+<<<<<<< HEAD
+>>>>>>> refs/remotes/upstream/develop
+=======
 >>>>>>> refs/remotes/upstream/develop
     'js/lib/jquery.qtip.min.js',
     'js/lib/state-machine.min.js',

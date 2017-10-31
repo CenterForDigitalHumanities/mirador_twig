@@ -2,6 +2,9 @@ describe('AnnotationsTab', function() {
 <<<<<<< HEAD
 =======
   var subject;
+<<<<<<< HEAD
+>>>>>>> refs/remotes/upstream/develop
+=======
 >>>>>>> refs/remotes/upstream/develop
 
   beforeEach(function() {
@@ -140,6 +143,9 @@ describe('AnnotationsTab', function() {
     //   subject.element.find('.annotationListItem').first().click();
     //   expect(this.eventEmitter.publish).toHaveBeenCalledWith('listSelected.' + this.windowId, 'glub1');
     // });
+<<<<<<< HEAD
+>>>>>>> refs/remotes/upstream/develop
+=======
 >>>>>>> refs/remotes/upstream/develop
   });
 

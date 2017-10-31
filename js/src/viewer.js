@@ -104,7 +104,7 @@
         eventEmitter: this.eventEmitter
       });
 
-      this.manifestsPanel = new $.ManifestsPanel({ appendTo: this.element.find('.mirador-viewer'), state: this.state, eventEmitter: this.eventEmitter });
+      this.manifestsPanel = new $[this.state.getStateProperty('manifestsPanel').module](jQuery.extend({}, this.state.getStateProperty('manifestsPanel').options, { appendTo: this.element.find('.mirador-viewer'), state: this.state, eventEmitter: this.eventEmitter }));
       //only instatiate bookmarkPanel if we need it
       if (showMainMenu && this.state.getStateProperty('mainMenuSettings').buttons.bookmark) {
         this.bookmarkPanel = new $.BookmarkPanel({ appendTo: this.element.find('.mirador-viewer'), state: this.state, eventEmitter: this.eventEmitter });
@@ -241,7 +241,11 @@
         } else if (manifest.hasOwnProperty('manifestUri')) {
           var url = manifest.manifestUri;
           _this.addManifestFromUrl(url, manifest.location ? manifest.location : '', null);
+        } else if (manifest.hasOwnProperty('collectionContent')) {
+          var collectionContent = manifest.collectionContent;
+          _this.addCollectionFromUrl(collectionContent['@id'], manifest.location ? manifest.location : '', collectionContent);
         } else if (manifest.hasOwnProperty('collectionUri')) {
+<<<<<<< HEAD
           jQuery.getJSON(manifest.collectionUri).done(function (data, status, jqXHR) {
             if (data.hasOwnProperty('manifests')){
               jQuery.each(data.manifests, function (ci, mfst) {
@@ -251,6 +255,10 @@
           }).fail(function(jqXHR, status, error) {
             console.log(jqXHR, status, error);
           });
+=======
+          var collectionUrl = manifest.collectionUri;
+          _this.addCollectionFromUrl(collectionUrl, manifest.location ? manifest.location : '', null);
+>>>>>>> refs/remotes/upstream/develop
         }
       });
     },
@@ -273,6 +281,18 @@
         _this.eventEmitter.publish('manifestQueued', manifest, location);
         manifest.request.done(function() {
           _this.eventEmitter.publish('manifestReceived', manifest);
+        });
+      }
+    },
+    
+    addCollectionFromUrl: function(url, location, content) {
+      var _this = this,
+        collection;
+      if (!_this.state.getStateProperty('manifests')[url]) {
+        collection = new $.Collection(url, location, content);
+        _this.eventEmitter.publish('manifestQueued', collection, location);
+        collection.request.done(function() {
+          _this.eventEmitter.publish('collectionReceived', [collection, url, null]);
         });
       }
     },

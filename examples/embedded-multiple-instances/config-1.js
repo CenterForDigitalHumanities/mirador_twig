@@ -1,5 +1,5 @@
 (function ($) {
-  
+
   $.config_1 = {
     "id" : "mirador_viewer_1",
     "saveSession" : false,
@@ -8,14 +8,12 @@
       { "manifestUri": "http://dms-data.stanford.edu/data/manifests/Walters/qm670kv1873/manifest.json", "location": "Stanford University" }
     ],
     "buildPath" : "/",
-    "i18nPath" : "mirador/locales/",
-    "imagesPath" : "mirador/images/",
-    "logosPath" : "mirador/images/logos/",
     "mainMenuSettings" : {
       "show" : true,
       "buttons" : {
         "bookmark" : false,
         "fullScreenViewer": true,
+      "show" : true,
         "options": false
       },
       "userButtons" : [
@@ -25,6 +23,10 @@
         "attributes" : { "id" : "logo", "href" : "http://iiif.io", "target" : "_blank" }
       }
     },
+    "annotationEndpoint" : {
+      "name": "Local Storage",
+      "module": "LocalStorageEndpoint"
+    },
     "windowObjects" : [],
     "annotationLayer" : true,
     "annotationEndpoint" : { 
@@ -32,5 +34,5 @@
       "module": "LocalStorageEndpoint"
     }
   };
-  
+
 })(MiradorExample);
